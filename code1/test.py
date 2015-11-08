@@ -8,4 +8,4 @@ print os.path.join(
     "data",
     "abc"
 )
-print os.path.isfile("../test.py")
+print os.path.isfile("test.py")
