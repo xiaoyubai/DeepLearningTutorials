@@ -4,6 +4,9 @@ import os
 import sys
 import timeit
 from sklearn import linear_model, datasets
+from pylab import imshow, show, cm
+from sklearn.metrics import classification_report
+
 
 import numpy as np
 
@@ -83,6 +86,13 @@ def sgd_optimization_mnist():
     logreg.fit(train_set_x, train_set_y)
 
     print logreg.get_params()
+
+def view_image(image, label=""):
+    """View a single image."""
+    print ("Label: %s" % label)
+    imshow(image, cmap=cm.gray)
+    show()
+
 
 
 def predict():
